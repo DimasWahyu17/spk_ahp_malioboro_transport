@@ -1,0 +1,217 @@
+/* ===== Design tokens ===== */
+:root {
+  --admin-bg: #F7F8FA;
+  --admin-surface: #FFFFFF;
+  --admin-border: #E4E7EC;
+  --admin-text: #1F2430;
+  --admin-text-muted: #6B7280;
+  --admin-accent: #2F6F6D;
+  --admin-accent-soft: #E6F0EF;
+  --admin-highlight: #D98E04;
+  --admin-highlight-soft: #FCF0DB;
+  --admin-radius: 8px;
+  --admin-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--admin-bg);
+  font-family: var(--admin-font);
+  color: var(--admin-text);
+}
+
+/* ===== Page shell ===== */
+.admin-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.admin-page-header {
+  margin-bottom: 24px;
+}
+
+.admin-page-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--admin-text);
+  margin: 0 0 4px;
+}
+
+.admin-page-header p {
+  font-size: 14px;
+  color: var(--admin-text-muted);
+  margin: 0;
+}
+
+/* ===== Card panel ===== */
+.admin-card {
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  padding: 20px;
+}
+
+.admin-card + .admin-card {
+  margin-top: 20px;
+}
+
+/* ===== Toolbar (search, add button, etc.) ===== */
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-search {
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: var(--admin-font);
+  min-width: 220px;
+}
+
+.admin-search:focus {
+  outline: 2px solid var(--admin-accent);
+  outline-offset: 1px;
+}
+
+/* ===== Buttons ===== */
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  border-radius: var(--admin-radius);
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--admin-font);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  text-decoration: none;
+}
+
+.admin-btn-primary {
+  background: var(--admin-accent);
+  color: #fff;
+}
+.admin-btn-primary:hover { background: #255957; }
+
+.admin-btn-outline {
+  background: transparent;
+  border-color: var(--admin-border);
+  color: var(--admin-text);
+}
+.admin-btn-outline:hover { border-color: var(--admin-accent); color: var(--admin-accent); }
+
+.admin-btn-danger {
+  background: transparent;
+  border-color: #E4E7EC;
+  color: #B42318;
+}
+.admin-btn-danger:hover { background: #FEF3F2; border-color: #FDA29B; }
+
+.admin-btn-sm { padding: 5px 10px; font-size: 13px; }
+
+/* ===== Table ===== */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: none;
+  color: var(--admin-text-muted);
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--admin-border);
+  color: var(--admin-text);
+}
+
+.admin-table tr:last-child td { border-bottom: none; }
+
+.admin-table tbody tr:hover { background: var(--admin-bg); }
+
+.admin-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== Ranking highlight (Hasil AHP) ===== */
+.admin-rank-row-top {
+  background: var(--admin-highlight-soft);
+}
+
+.admin-rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--admin-accent-soft);
+  color: var(--admin-accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-rank-badge-top {
+  background: var(--admin-highlight);
+  color: #fff;
+}
+
+/* ===== Empty / loading states ===== */
+.admin-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--admin-text-muted);
+  font-size: 14px;
+}
+
+/* ===== Modal (konfirmasi hapus) ===== */
+.admin-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.admin-modal {
+  background: var(--admin-surface);
+  border-radius: var(--admin-radius);
+  padding: 24px;
+  width: 360px;
+  max-width: 90vw;
+}
+
+.admin-modal h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.admin-modal p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--admin-text-muted);
+}
+
+.admin-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

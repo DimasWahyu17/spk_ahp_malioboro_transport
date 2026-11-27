@@ -1,0 +1,160 @@
+/* Container utama */
+.transportasi-container {
+  padding-top: 80px; /* Memberikan ruang agar tidak tertutup header */
+  background: linear-gradient(135deg, #86C8F2 0%, #FFA500 100%); /* Gradasi biru muda ke oranye */
+  background-color: #86C8F2; /* Fallback warna biru muda */
+  min-height: 100vh; /* Agar background memenuhi seluruh halaman */
+  overflow-x: hidden;
+  font-family: Arial, sans-serif; /* Font lebih modern */
+}
+
+/* Untuk memastikan header tetap berada di atas dan tidak menghalangi background */
+.transportasi-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(52, 58, 64, 0.8); /* Semi transparan agar background tetap terlihat */
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Agar logo di kiri dan profil di kanan */
+  gap: 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease; /* Transisi warna saat scroll */
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Profil Pengguna di kanan atas */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.username {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.logout-btn, .login-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover, .login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Judul Pemilihan */
+.transportasi-title {
+  text-align: center;
+  margin-top: 120px; /* Memberikan ruang antara header dan judul */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff; /* Menggunakan warna putih untuk kontras */
+}
+
+/* Gaya untuk setiap item transportasi */
+.transportasi-content {
+  margin-top: 20px; /* Memberikan ruang antara judul dan konten */
+  padding: 0 2rem;
+}
+
+.transportasi-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0; /* Memberikan jarak lebih antara setiap item */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transportasi-image-container {
+  width: 40%;
+}
+
+.transportasi-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.transportasi-description {
+  width: 60%;
+}
+
+.transportasi-name {
+  text-align: center;
+  font-size: 2rem; /* Memperbesar font untuk nama kendaraan */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.transportasi-description p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5; /* Membuat paragraf lebih mudah dibaca */
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsivitas untuk ukuran layar kecil */
+@media (max-width: 768px) {
+  .transportasi-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transportasi-image-container {
+    width: 80%; /* Lebih besar untuk gambar pada layar kecil */
+  }
+
+  .transportasi-description {
+    width: 100%;
+    text-align: center;
+  }
+
+  .transportasi-name {
+    font-size: 1.5rem;
+  }
+
+  .transportasi-description p {
+    font-size: 1rem;
+  }
+}

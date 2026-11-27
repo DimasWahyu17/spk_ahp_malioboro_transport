@@ -1,0 +1,73 @@
+/* Footer Wrapper */
+.footer {
+  background-color: #0a192f; /* Warna biru dongker */
+  padding: 2rem 0;
+  color: #d1d5db; /* Warna teks yang terang */
+}
+
+/* Footer Container */
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grid Layout for Footer Sections */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Kolom */
+  gap: 2rem; /* Jarak antar kolom */
+  padding: 0 2rem;
+  justify-items: center; /* Pusatkan konten secara horizontal */
+  align-items: start; /* Konten mulai dari atas */
+}
+
+/* Footer Item Style */
+.footer-item {
+  text-align: center; /* Teks berada di tengah */
+}
+
+/* Footer Title */
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white; /* Warna putih untuk judul */
+  margin-bottom: 1rem;
+}
+
+/* Social Media Icons */
+.footer-icon {
+  width: 2rem;  /* Ukuran ikon */
+  height: 2rem; /* Menjaga rasio aspek */
+  margin: 0.5rem; /* Jarak antar ikon */
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1); /* Efek hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d1d5db; /* Teks terang */
+  background-color: #0a192f; /* Sama dengan warna biru dongker */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* 1 kolom untuk mobile */
+    text-align: center;
+    gap: 1rem; /* Jarak antar bagian */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

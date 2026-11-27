@@ -1,0 +1,318 @@
+styles.css
+.navbar-title {
+  color: #201e1c; /* Mengubah warna teks menjadi oranye */
+  font-size: 1.5rem; /* Ukuran font yang sesuai */
+  font-weight: bold; /* Menebalkan teks */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 90vmin;
+  pointer-events: none;
+}
+
+/* Tambahkan ini ke file CSS Anda */
+.bg-dark-blue {
+  background-color: #003366 !important;  /* Biru Tua */
+}
+/* Tambahkan ini ke file CSS Anda */
+.navbar-title {
+  color: white;  /* Menambahkan warna putih pada teks */
+  font-size: 1.2rem;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 3s linear;
+  } */
+
+
+/* .App-link {
+  color: #65b7cd;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Masthead Styles */
+.masthead {
+  position: relative;
+  height: 100vh;
+  background-image: url('/src/img/na.jpg'); /* Ganti dengan path gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); Add text shadow for better readability */
+}
+
+
+.masthead .container {
+  height: 100%;
+}
+
+.masthead-content {
+  text-align: center;  
+  position: relative;
+  color: rgb(14, 11, 11);
+  padding-left: 1rem;
+}
+
+
+/* Mengurangi lebar dan posisi lebih ke kiri */
+.masthead .masthead-content {
+  padding-left: 0;
+  max-width: 50%; /* Memperkecil lebar konten */
+}
+
+/* Mengurangi ukuran font pada judul */
+.masthead .overlay-title {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Memperkecil ukuran font deskripsi */
+/* Kontainer teks (judul dan deskripsi) */
+/* Bagian teks */
+.masthead .overlay-text {
+  margin-bottom: 30px; /* Memberikan jarak antara teks dan tombol */
+}
+
+/* Tombol (CTA) */
+.button-section {
+  text-align: center; /* Menjaga tombol tetap terpusat */
+  margin-top: 20px; /* Menambahkan jarak antara tombol dan teks */
+}
+
+.masthead .overlay-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #efd39c;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.masthead .overlay-btn:hover {
+  background-color: #6c757d;
+}
+
+
+
+
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #86c4ee; /* Blue for "Masuk" */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* "Daftar" Button */
+.daftar {
+  /* Same styles as .button */
+  background-color: #ccc; /* Grey for "Daftar" */
+  color: black;
+}
+
+.daftar:hover {
+  background-color: #aaa; /* Slightly darker grey on hover */
+}
+
+
+
+
+.overlay-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+
+
+.masthead .btn-primary:hover {
+  background-color: #53affa;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Overlay Styles */
+.overlay {
+  position: relative;
+  display: block; /* Mengubah menjadi block agar lebar dapat diatur */
+  width: 100%; /* Atur lebar menjadi 100% dari kontainer */
+  padding: 20px; /* Tambahkan padding untuk memberi ruang di dalam overlay */
+  border-radius: 40px; /* Membuat sudut melengkung */
+  /* background: linear-gradient(to right, #e4d2cd, #b5cbec); Warna gradasi untuk background */
+  transform: scale(1.05); /* Memberikan efek pembesaran sedikit */
+  transition: transform 0.3s ease-in-out; /* Animasi untuk efek scale saat hover */
+}
+
+.overlay:hover {
+  transform: scale(1.1); /* Memberikan efek pembesaran lebih besar saat hover */
+}
+
+/* Overlay background overlay */
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1; /* Pastikan overlay berada di belakang teks */
+  border-radius: 40px; /* Sudut melengkung pada lapisan ini juga */
+}
+
+
+/* Overlay Text */
+.overlay-text {
+  position: relative;
+  z-index: 2; /* Pastikan teks berada di atas overlay */
+  color: rgb(23, 21, 21); /* Warna teks putih agar kontras dengan overlay */
+  font-size: 1.2rem; /* Ukuran font untuk teks overlay */
+  line-height: 1.5; /* Jarak antar baris untuk keterbacaan */
+  text-align: center; /* Memusatkan teks */
+}
+
+.overlay-text.mb-4 {
+  margin-bottom: 30px; /* Tambahkan jarak bawah lebih besar */
+}
+
+.masthead-content a.btn {
+  margin-top: 40px; /* Pastikan tombol juga memiliki jarak atas */
+}
+.masthead {
+  padding-top: 200px; /* Memberikan jarak dari atas halaman */
+}
+
+.masthead-content {
+  margin-top: 80px; /* Memberikan jarak tambahan ke bawah pada konten */
+}
+
+.masthead-content a.btn {
+  margin-top: 50px; /* Memberikan jarak lebih besar antara teks dan tombol */
+}
+/* Styling untuk section Pesan */
+#contact {
+  padding-top: 30px; /* Memberikan jarak atas agar konten tidak terlalu dekat dengan bagian atas */
+}
+/* Styling untuk seluruh section Pesan */
+#contact {
+  background-color: #f8f9fa; /* Warna latar belakang untuk seluruh section */
+  padding: 50px 0; /* Menambahkan padding agar bagian atas dan bawah tidak terlalu rapat */
+  border-radius: 10px; /* Sudut melengkung pada seluruh section */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan kesan kedalaman */
+  border: 2px solid #ddd; /* Bingkai tipis berwarna abu-abu pada section */
+}
+
+/* Styling untuk header "Hubungi Kami" */
+#contact .text-center {
+  margin-bottom: 30px; /* Memberikan jarak antara header dan form */
+}
+
+#contact .text-center h2 {
+  margin-bottom: 20px; /* Menambah jarak antara judul dan deskripsi */
+}
+
+#contact .text-center p {
+  font-size: 1.2rem; /* Ukuran font deskripsi */
+  color: #6c757d; /* Warna teks abu-abu untuk deskripsi */
+}
+
+/* Styling untuk form di dalam contact */
+#contactForm {
+  background-color: #ffffff; /* Warna latar belakang form */
+  padding: 30px; /* Menambahkan padding di dalam form */
+  border-radius: 10px; /* Sudut melengkung pada form */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus pada form */
+  border: 2px solid #ddd; /* Bingkai tipis berwarna abu-abu */
+  margin-top: 20px; /* Memberikan jarak agar form tidak terlalu rapat dengan header "Hubungi Kami" */
+}
+
+/* Styling untuk input dan textarea di dalam form */
+#contactForm .form-floating {
+  margin-bottom: 1.5rem; /* Jarak antar elemen form */
+}
+
+/* Menambahkan border dan padding pada input dan textarea */
+#contactForm .form-control {
+  border: 1px solid #ced4da; /* Warna border untuk input dan textarea */
+  border-radius: 5px; /* Sudut melengkung pada elemen input */
+  padding: 1rem; /* Menambahkan padding di dalam input dan textarea */
+  background-color: #fff; /* Warna latar belakang input */
+}
+
+/* Memberikan highlight pada input saat fokus */
+#contactForm .form-control:focus {
+  border-color: #007bff; /* Mengubah warna border saat fokus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Memberikan efek glow saat fokus */
+}
+
+/* Styling untuk tombol kirim */
+#contactForm .btn {
+  background: linear-gradient(to right, rgb(133, 186, 238), rgb(237, 230, 230)); /* Gradasi biru dan biru muda */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border tombol */
+  padding: 15px; /* Menambahkan padding di dalam tombol */
+  border-radius: 5px; /* Sudut melengkung pada tombol */
+  font-size: 1.2rem; /* Ukuran font tombol */
+  width: 100%; /* Membuat tombol selebar form */
+}
+
+/*
+
+}
+
+/* Efek hover untuk tombol */
+#contactForm .btn:hover {
+  background: linear-gradient(to right, #0056b3, #4d9bff); /* Gradasi biru lebih gelap saat hover */
+  cursor: pointer; /* Mengubah cursor saat hover */
+}
+
+
+
+/* Styling untuk nomor telepon */
+#contact .col-lg-4.text-center {
+  margin-top: 30px; /* Memberikan jarak antara kolom nomor telepon dan form */
+}
+
+#contact .bi-phone {
+  font-size: 2rem; /* Ukuran icon telepon */
+  margin-bottom: 10px; /* Menambah jarak antara icon dan nomor telepon */
+}
+
+html, body {
+  overflow: auto; /* Pastikan scrolling tidak diblokir */
+  scroll-behavior: smooth; /* Tambahkan untuk efek scroll mulus */
+}
+

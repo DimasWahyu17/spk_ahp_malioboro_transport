@@ -1,0 +1,112 @@
+/* Container utama */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a2c2e8, #f0f8ff); /* Gradasi biru dan abu muda */
+    font-family: 'Poppins', sans-serif; /* Gunakan font modern */
+  }
+  
+  /* Form container */
+  .login-form {
+    width: 400px; /* Lebar form */
+    padding: 30px;
+    border-radius: 15px; /* Sudut membulat lebih lembut */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih lembut */
+    background-color: #ffffff;
+    
+  }
+  
+  /* Heading */
+.login-heading {
+    text-align: center; /* Pusatkan teks */
+    font-size: 24px; /* Ukuran sedang */
+    font-weight: 500; /* Berat font sedang */
+    color: #333; /* Warna teks abu gelap */
+    margin-bottom: 15px; /* Spasi di bawah heading */
+  }
+  
+  /* Subheading */
+  .login-subheading {
+    text-align: center; /* Perataan teks di tengah */
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666; /* Warna teks abu-abu lembut */
+}
+
+  /* Label */
+ /* Label */
+/* Label */
+.login-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444; /* Warna teks abu-abu gelap */
+    text-align: left; /* Label tetap rata kiri */
+    font-weight: normal !important; /* Pastikan font tidak bold */
+  }
+  
+  
+  
+  /* Input field */
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Sudut lebih membulat */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+   
+  }
+  
+  .login-input:focus {
+    border-color: #007bff; /* Warna fokus biru */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Tambahkan bayangan fokus */
+  }
+  
+  /* Submit button */
+  .login-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px; /* Sudut lebih membulat */
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+   
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03); /* Tambahkan efek zoom saat hover */
+  }
+  
+  /* Error message */
+  .error-message {
+    margin-top: 20px;
+    color: #ff4d4d; /* Warna merah terang */
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .login-form {
+      width: 90%; /* Sesuaikan lebar pada layar kecil */
+      padding: 20px;
+    }
+  
+    .login-heading {
+      font-size: 20px;
+    }
+  
+    .login-button {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+  
